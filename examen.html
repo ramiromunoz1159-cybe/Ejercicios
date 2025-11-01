@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen de JavaScript</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            padding-top: 30px;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 90%;
+        }
+        h1 {
+            color: #007bff;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            font-size: 1.8em;
+            text-align: center;
+        }
+        label {
+            display: inline;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            font-weight: normal;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 20px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .mensaje {
+            font-size: 1.1em;
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 6px;
+            background-color: #e6f0ff;
+            border-left: 5px solid #007bff;
+        }
+        .error {
+            color: #dc3545;
+            background-color: #f8d7da;
+            border-left: 5px solid #dc3545;
+        }
+        a {
+            display: inline-block;
+            margin-top: 25px;
+            color: #6c757d;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            color: #007bff;
+            text-decoration: underline;
+        }
+        fieldset {
+            border: 1px solid #ced4da;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        legend {
+            font-weight: bold;
+            color: #007bff;
+            padding: 0 10px;
+        }
+        .pregunta { margin-bottom: 10px; }
+        .resultado { 
+            font-size: 1.2em; 
+            font-weight: bold; 
+            margin-top: 20px; 
+            padding: 15px;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>5. Examen de JavaScript</h1>
+        <form id="formularioExamen">
+            
+            <fieldset>
+                <legend>Pregunta 1 (1 Punto): ¿Cuál es la sintaxis correcta para un comentario de una sola línea en JavaScript?</legend>
+                <div class="pregunta">
+                    <input type="radio" name="p1" value="a" id="p1a"> <label for="p1a">// Este es un comentario</label><br>
+                    <input type="radio" name="p1" value="b" id="p1b"> <label for="p1b">/* Este es un comentario */</label><br>
+                    <input type="radio" name="p1" value="c" id="p1c"> <label for="p1c"># Este es un comentario</label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Pregunta 2 (1 Punto): ¿Qué función se usa para imprimir contenido en la consola del navegador?</legend>
+                <div class="pregunta">
+                    <input type="radio" name="p2" value="a" id="p2a"> <label for="p2a">alert()</label><br>
+                    <input type="radio" name="p2" value="b" id="p2b"> <label for="p2b">document.write()</label><br>
+                    <input type="radio" name="p2" value="c" id="p2c"> <label for="p2c">console.log()</label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Pregunta 3 (1 Punto): ¿Qué operador se usa para comprobar si dos valores son iguales Y del mismo tipo de dato?</legend>
+                <div class="pregunta">
+                    <input type="radio" name="p3" value="a" id="p3a"> <label for="p3a">=</label><br>
+                    <input type="radio" name="p3" value="b" id="p3b"> <label for="p3b">==</label><br>
+                    <input type="radio" name="p3" value="c" id="p3c"> <label for="p3c">===</label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Pregunta 4 (1 Punto): Selecciona los tipos de datos primitivos en JavaScript (Selecciona TODAS las correctas):</legend>
+                <div class="pregunta">
+                    <input type="checkbox" name="p4" value="a" id="p4a"> <label for="p4a">String</label><br>
+                    <input type="checkbox" name="p4" value="b" id="p4b"> <label for="p4b">Array</label><br>
+                    <input type="checkbox" name="p4" value="c" id="p4c"> <label for="p4c">Boolean</label><br>
+                    <input type="checkbox" name="p4" value="d" id="p4d"> <label for="p4d">Number</label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Pregunta 5 (1 Punto): ¿Cuáles de las siguientes palabras clave se usan para declarar variables en JavaScript? (Selecciona TODAS las correctas):</legend>
+                <div class="pregunta">
+                    <input type="checkbox" name="p5" value="a" id="p5a"> <label for="p5a">var</label><br>
+                    <input type="checkbox" name="p5" value="b" id="p5b"> <label for="p5b">const</label><br>
+                    <input type="checkbox" name="p5" value="c" id="p5c"> <label for="p5c">type</label><br>
+                    <input type="checkbox" name="p5" value="d" id="p5d"> <label for="p5d">let</label>
+                </div>
+            </fieldset>
+
+            <button type="button" onclick="calificarExamen()">Calificar Examen</button>
+        </form>
+        
+        <p id="notaFinal" class="resultado"></p>
+
+        <script>
+            function calificarExamen() {
+                let nota = 0;
+                const resultados = document.getElementById('notaFinal');
+                const form = document.getElementById('formularioExamen');
+                
+                const respuestasCorrectas = {
+                    p1: 'a',
+                    p2: 'c',
+                    p3: 'c',
+                    p4: ['a', 'c', 'd'], 
+                    p5: ['a', 'b', 'd']  
+                };
+
+                let todosContestados = true;
+                for (let i = 1; i <= 5; i++) {
+                    const nombrePregunta = `p${i}`;
+                    const respuestas = form.querySelectorAll(`input[name="${nombrePregunta}"]:checked`);
+                    if (respuestas.length === 0) {
+                        todosContestados = false;
+                        break;
+                    }
+                }
+
+                if (!todosContestados) {
+                    resultados.textContent = 'Error: Debes responder **todas** las preguntas antes de calificar.';
+                    resultados.classList.add('error');
+                    resultados.style.backgroundColor = '#f8d7da';
+                    resultados.style.borderLeft = '5px solid #dc3545';
+                    return;
+                }
+
+                resultados.classList.remove('error');
+                resultados.style.backgroundColor = '#e6f0ff';
+                resultados.style.borderLeft = '5px solid #007bff';
+
+
+                for (let i = 1; i <= 3; i++) {
+                    const nombrePregunta = `p${i}`;
+                    const respuestaSeleccionada = form.querySelector(`input[name="${nombrePregunta}"]:checked`).value;
+                    if (respuestaSeleccionada === respuestasCorrectas[nombrePregunta]) {
+                        nota++;
+                    }
+                }
+
+                for (let i = 4; i <= 5; i++) {
+                    const nombrePregunta = `p${i}`;
+                    const respuestasSeleccionadas = Array.from(form.querySelectorAll(`input[name="${nombrePregunta}"]:checked`)).map(input => input.value);
+                    const correctasP = respuestasCorrectas[nombrePregunta];
+
+                    const esCorrecta = respuestasSeleccionadas.length === correctasP.length &&
+                                       respuestasSeleccionadas.every(val => correctasP.includes(val));
+                    
+                    if (esCorrecta) {
+                        nota++;
+                    }
+                }
+
+                const totalPreguntas = 5;
+                resultados.textContent = `Calificación Obtenida: **${nota}** / ${totalPreguntas} puntos.`;
+                
+                if (nota >= 3) {
+                    resultados.style.backgroundColor = '#d4edda'; 
+                    resultados.style.color = '#155724';
+                    resultados.style.borderLeft = '5px solid #28a745'; 
+                } else {
+                    resultados.style.backgroundColor = '#f8d7da'; 
+                    resultados.style.color = '#721c24'; 
+                    resultados.style.borderLeft = '5px solid #dc3545';
+                }
+            }
+        </script>
+        <br>
+        <a href="index.html">← Volver al Menú</a>
+    </div>
+</body>
+</html>
